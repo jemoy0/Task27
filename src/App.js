@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { ToDoList } from './components/todolist'
 
 function App() {
+  const toDos = [
+    {index: 1, name: "Task 1"},
+    {index: 2, name: "Task 2"},
+    {index: 3, name: "Task 3"},
+    {index: 4, name: "Task 4"},
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ToDoList toDos={toDos}/>
   );
 }
 
